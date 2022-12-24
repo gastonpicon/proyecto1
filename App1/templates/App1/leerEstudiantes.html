@@ -1,0 +1,23 @@
+{% extends "App1/fuente.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">LISTADO DE ESTUDIANTES</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1>LISTADO DE ESTUDIANTES</h1>
+
+
+<ul>
+    {% for estudiante in object_list %}
+        <li>{{ estudiante }}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+
+
+
+{% endblock %}

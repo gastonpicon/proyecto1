@@ -1,0 +1,26 @@
+{% extends "App1/fuente.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO DE CURSOS</h1>
+{% endblock %}
+
+<!---{% block contenido_que_cambiaa %}
+<form action="{% url 'cursoFormulario' %}" method="POST"> {% csrf_token %}
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Comision: <input type="number" name="comision"></p>
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}--->
+
+{% block contenido_que_cambia %}
+<form action="{% url 'cursos' %}" method="POST"> {% csrf_token %}
+    
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}

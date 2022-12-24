@@ -1,0 +1,14 @@
+{% extends "App1/fuente.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">SISTEMA WEB APP1</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h1>ESTE ES EL CONTENIDO QUE CAMBIA</h1>
+
+{{ mensaje }}
+
+{% endblock %}
